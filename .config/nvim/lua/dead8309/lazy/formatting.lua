@@ -22,7 +22,7 @@ function FormatBuf()
 		end
 
 		local progress = require("fidget.progress")
-		local fmt_info = table.concat(fmt_names, "/")
+		local fmt_info = table.concat(fmt_names, ",")
 		local handle = progress.handle.create({
 			title = "conform",
 			lsp_client = { name = fmt_info },
@@ -73,6 +73,7 @@ return {
 				markdown = { "prettier" },
 				graphql = { "prettier" },
 				lua = { "stylua" },
+				go = { "gofumpt", "goimports-reviser", "golines" },
 			},
 		})
 
