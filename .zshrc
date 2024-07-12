@@ -130,3 +130,6 @@ bindkey -s ^f "tmux-sessionizer\n"
 export PATH="/home/kiit/.local/bin:$PATH"
 
 export PATH="$PATH:/snap/bin"
+
+# Fzf completion
+eval "$(fzf --zsh)"
