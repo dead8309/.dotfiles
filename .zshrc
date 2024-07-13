@@ -133,3 +133,5 @@ export PATH="$PATH:/snap/bin"
 
 # Fzf completion
 eval "$(fzf --zsh)"
+
+source ~/.profile
