@@ -2,7 +2,7 @@ function FormatBuf()
 	local format_args = {
 		lsp_fallback = true,
 		async = false,
-		timeout_ms = 500,
+		timeout_ms = 1000,
 	}
 
 	local have_fmt, conform = pcall(require, "conform")
