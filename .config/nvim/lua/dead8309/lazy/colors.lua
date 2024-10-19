@@ -15,9 +15,11 @@ return {
 				disable_background = false,
 				styles = {
 					italic = false,
+					transparency = true,
 				},
 			})
-			ColorMyPencils()
+			-- ColorMyPencils()
+			vim.cmd.colorscheme("rose-pine")
 		end,
 	},
 	{
@@ -27,8 +29,8 @@ return {
 		config = function()
 			vim.g.gruvbox_material_disable_italic_comment = 1
 			vim.g.gruvbox_material_background = "hard"
-			vim.cmd.colorscheme("gruvbox-material")
-			ColorMyPencils("gruvbox-material")
+			-- vim.cmd.colorscheme("gruvbox-material")
+			-- ColorMyPencils("gruvbox-material")
 		end,
 	},
 }
