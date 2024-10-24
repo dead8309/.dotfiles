@@ -73,6 +73,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git nvm)
 
 source $ZSH/oh-my-zsh.sh
+source ~/.profile
 
 # User configuration
 
@@ -133,5 +134,3 @@ export PATH="$PATH:/snap/bin"
 
 # Fzf completion
 eval "$(fzf --zsh)"
-
-source ~/.profile
