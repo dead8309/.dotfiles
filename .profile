@@ -29,3 +29,6 @@ fi
 
 # Go
 export PATH=$PATH:/usr/local/go/bin
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
