@@ -15,7 +15,7 @@ return {
 				disable_background = false,
 				styles = {
 					italic = false,
-					transparency = true,
+					-- transparency = true,
 				},
 			})
 			-- ColorMyPencils()
@@ -31,6 +31,26 @@ return {
 			vim.g.gruvbox_material_background = "hard"
 			-- vim.cmd.colorscheme("gruvbox-material")
 			-- ColorMyPencils("gruvbox-material")
+		end,
+	},
+	{
+		"sho-87/kanagawa-paper.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
+	{
+		"aktersnurra/no-clown-fiesta.nvim",
+		priority = 1000,
+		lazy = false,
+		config = function()
+			require("no-clown-fiesta").setup({
+				styles = {
+					type = { bold = true },
+					lsp = { underline = false },
+					match_paren = { underline = true },
+				},
+			})
 		end,
 	},
 }

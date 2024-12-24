@@ -18,6 +18,12 @@ sudo apt install git
 sudo apt install stow
 ```
 
+### Tmux (tpm)
+
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
 
 ## Installation
 

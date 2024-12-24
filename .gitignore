@@ -1,2 +1,4 @@
 .local/bin/ghostty
 .local/bin/bat
+.local/bin/ffmpeg
+.local/bin/ffprobe
