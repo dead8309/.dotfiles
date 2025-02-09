@@ -70,7 +70,9 @@ return {
 					},
 				},
 				options = {
-					theme = "rose-pine",
+                    theme = "tokyonight",
+					-- theme = "rose-pine",
+					-- theme = "melange",
 					disabled_filetypes = {
 						statusline = {
 							"dashboard",

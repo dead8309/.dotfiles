@@ -74,6 +74,7 @@ return {
 				graphql = { "prettier" },
 				lua = { "stylua" },
 				go = { "gofumpt", "goimports-reviser", "golines" },
+				bash = { "shfmt" },
 			},
 		})
 
