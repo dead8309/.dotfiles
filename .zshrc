@@ -136,3 +136,10 @@ export PATH="$PATH:/snap/bin"
 eval "$(fzf --zsh)"
 
 source ~/.enviornment-keys
+
+# bun completions
+[ -s "/home/kiit/.bun/_bun" ] && source "/home/kiit/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
