@@ -2,3 +2,4 @@
 .local/bin/bat
 .local/bin/ffmpeg
 .local/bin/ffprobe
+.local/bin/zls

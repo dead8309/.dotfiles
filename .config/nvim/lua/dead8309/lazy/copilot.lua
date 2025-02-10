@@ -6,6 +6,9 @@ return {
 		event = "InsertEnter",
 		config = function()
 			require("copilot").setup({
+				filetypes = {
+					zig = false,
+				},
 				panel = {
 					enabled = true,
 					auto_refresh = true,

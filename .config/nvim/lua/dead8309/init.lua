@@ -2,49 +2,38 @@ require("dead8309.set")
 require("dead8309.remap")
 require("dead8309.lazy_init")
 
--- DO.not
--- DO NOT INCLUDE THIS
-
--- If i want to keep doing lsp debugging
--- function restart_htmx_lsp()
---     require("lsp-debug-tools").restart({ expected = {}, name = "htmx-lsp", cmd = { "htmx-lsp", "--level", "DEBUG" }, root_dir = vim.loop.cwd(), });
--- end
-
--- DO NOT INCLUDE THIS
--- DO.not
-
 local augroup = vim.api.nvim_create_augroup
-local VaibhavGroup = augroup('Vaibhav', {})
+local VaibhavGroup = augroup("Vaibhav", {})
 
 local autocmd = vim.api.nvim_create_autocmd
-local yank_group = augroup('HighlightYank', {})
+local yank_group = augroup("HighlightYank", {})
 
 function R(name)
-    require("plenary.reload").reload_module(name)
+	require("plenary.reload").reload_module(name)
 end
 
 vim.filetype.add({
-    extension = {
-        templ = 'templ',
-    }
+	extension = {
+		templ = "templ",
+	},
 })
 
-autocmd('TextYankPost', {
-    group = yank_group,
-    pattern = '*',
-    callback = function()
-        vim.highlight.on_yank({
-            higroup = 'IncSearch',
-            timeout = 40,
-        })
-        vim.fn.system('clip.exe', vim.fn.getreg('"'))
-    end,
+autocmd("TextYankPost", {
+	group = yank_group,
+	pattern = "*",
+	callback = function()
+		vim.highlight.on_yank({
+			higroup = "IncSearch",
+			timeout = 40,
+		})
+		vim.fn.system("clip.exe", vim.fn.getreg('"'))
+	end,
 })
 
 autocmd({ "BufWritePre" }, {
-    group = VaibhavGroup,
-    pattern = "*",
-    command = [[%s/\s\+$//e]],
+	group = VaibhavGroup,
+	pattern = "*",
+	command = [[%s/\s\+$//e]],
 })
 
 autocmd('LspAttach', {
@@ -62,6 +51,15 @@ autocmd('LspAttach', {
         vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
         vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
     end
+})
+
+autocmd('BufEnter', {
+	group = VaibhavGroup,
+	callback = function()
+		if vim.bo.filetype == "zig" then
+			vim.lsp.inlay_hint.enable(true)
+		end
+	end,
 })
 
 vim.g.netrw_browse_split = 0
