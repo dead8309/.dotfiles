@@ -82,6 +82,7 @@ return {
 				["<C-Space>"] = cmp.mapping.complete(),
 			}),
 			sources = cmp.config.sources({
+				{ name = "lazydev", group_index = 0 },
 				{ name = "nvim_lsp" },
 				{ name = "path" },
 			}, {
@@ -95,7 +96,7 @@ return {
 				focusable = false,
 				style = "minimal",
 				border = "rounded",
-				source = "always",
+				source = true,
 				header = "",
 				prefix = "",
 			},
