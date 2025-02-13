@@ -8,6 +8,7 @@ return {
 			require("copilot").setup({
 				filetypes = {
 					zig = false,
+					markdown = true,
 				},
 				panel = {
 					enabled = true,
