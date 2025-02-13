@@ -8,20 +8,20 @@ Ensure you have the following installed on your system
 
 ### Git
 
-```
+```sh
 sudo apt install git
 ```
 
 ### Stow
 
-```
+```sh
 sudo apt install stow
 ```
 
 ### Tmux (tpm)
 
-```
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```sh
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 ```
 
 
@@ -30,14 +30,13 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 First, check out the dotfiles repo in your $HOME directory using git
 
 
-```
-$ git clone git@github.com/dead8309/dotfiles.git
-$ cd dotfiles
+```sh
+git clone git@github.com/dead8309/dotfiles.git
+cd dotfiles
 ```
 
 then use GNU stow to create symlinks
 
-```
-
-$ stow .
+```sh
+stow .
 ```
