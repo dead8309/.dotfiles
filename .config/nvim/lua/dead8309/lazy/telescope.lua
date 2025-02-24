@@ -1,5 +1,6 @@
 return {
 	"nvim-telescope/telescope.nvim",
+	enabled = false,
 
 	tag = "0.1.5",
 
@@ -22,7 +23,7 @@ return {
 			builtin.grep_string({ search = word })
 		end)
 		vim.keymap.set("n", "<leader>ps", function()
-            builtin.live_grep()
+			builtin.live_grep()
 		end)
 		vim.keymap.set("n", "<leader>vh", builtin.help_tags, {})
 	end,
