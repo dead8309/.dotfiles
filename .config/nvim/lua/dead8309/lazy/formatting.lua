@@ -75,13 +75,14 @@ return {
 				lua = { "stylua" },
 				go = { "gofumpt", "goimports-reviser", "golines" },
 				bash = { "shfmt" },
+				python = { "black" },
 				rust = { "rustfmt" },
 			},
 			formatters = {
 				rustfmt = {
 					command = "rustfmt",
-					args = { "+nightly", "--edition", "2024"  },
-					cwd = require("conform.util").root_file({".git", "Cargo.toml"}),
+					args = { "+nightly", "--edition", "2024" },
+					cwd = require("conform.util").root_file({ ".git", "Cargo.toml" }),
 				},
 			},
 		})
