@@ -143,3 +143,6 @@ source ~/.enviornment-keys
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# gpg
+export GPG_TTY=$(tty)
