@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
-if [[ $# -eq 1 ]]; then
+stjude=~/dev/stjude-rust-labs/
 
+if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/dev ~/.config ~/ ~/uni -mindepth 1 -maxdepth 1 -xtype d | fzf)
+    selected=$(find ~/dev ~/.config ~/ ~/uni $stjude -mindepth 2 -maxdepth 1 -xtype d | fzf)
 fi
 
 if [[ -z $selected ]]; then
@@ -12,15 +13,14 @@ if [[ -z $selected ]]; then
 fi
 
 selected_name=$(basename "$selected" | tr . _)
-tmux_running=$(pgrep tmux)
 
 if [[ -z $TMUX ]]; then
-    tmux new-session -A -s $selected_name -c $selected
+    tmux new-session -A -s "$selected_name" -c "$selected"
     exit 0
 fi
 
-if ! tmux has-session -t=$selected_name 2> /dev/null; then
-    tmux new-session -ds $selected_name -c $selected
+if ! tmux has-session -t="$selected_name" 2>/dev/null; then
+    tmux new-session -ds "$selected_name" -c "$selected"
 fi
 
-tmux switch-client -t $selected_name
+tmux switch-client -t "$selected_name"
