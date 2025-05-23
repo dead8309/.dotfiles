@@ -63,7 +63,7 @@ return {
 			function()
 				Snacks.lazygit.open()
 			end,
-			{ desc = "Blame Line" },
+			{ desc = "LazyGit" },
 		},
 	},
 }
