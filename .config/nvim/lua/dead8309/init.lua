@@ -26,7 +26,7 @@ autocmd("TextYankPost", {
 			higroup = "IncSearch",
 			timeout = 40,
 		})
-		vim.fn.system("clip.exe", vim.fn.getreg('"'))
+		-- vim.fn.system("clip.exe", vim.fn.getreg('"'))
 	end,
 })
 
