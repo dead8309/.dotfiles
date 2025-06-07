@@ -3,3 +3,6 @@
 .local/bin/ffmpeg
 .local/bin/ffprobe
 .local/bin/zls
+.local/bin/uv
+.local/bin/uvx
+.local/bin/stripe
