@@ -52,6 +52,13 @@ return {
 			{ desc = "Live Grep" },
 		},
 		{
+			"<leader>pr",
+			function()
+				Snacks.picker.resume()
+			end,
+			{ desc = "Resume Picker" },
+		},
+		{
 			"<leader>vh",
 			function()
 				Snacks.picker.help()

@@ -48,15 +48,6 @@ return {
 	config = function()
 		--NOTE: use this prettier ver. only "prettier@2.8.8",
 
-		-- local null_ls = require("null-ls")
-		-- null_ls.setup({
-		-- 	sources = {
-		-- 		null_ls.builtins.formatting.prettier,
-		-- 		null_ls.builtins.formatting.stylua,
-		-- 	},
-		-- })
-		-- vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
-
 		local conform = require("conform")
 
 		conform.setup({

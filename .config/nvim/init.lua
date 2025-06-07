@@ -1,1 +1,7 @@
-require("dead8309")
+require("core.lsp")
+
+require("config.options")
+require("config.keymaps")
+require("config.autocmds")
+
+require("core.lazy")
