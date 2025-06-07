@@ -15,8 +15,8 @@ vim.diagnostic.config({
 		style = "minimal",
 		border = "rounded",
 		source = true,
-        header = "",
-        prefix = ""
+		header = "",
+		prefix = "",
 	},
 })
 

@@ -56,10 +56,7 @@ autocmd("LspAttach", {
 
 		local client = vim.lsp.get_client_by_id(e.data.client_id)
 
-		if
-			client
-			and client_supports_method(client, vim.lsp.protocol.Methods.textDocument_documentHighlight, e.buf)
-		then
+		if client and client_supports_method(client, vim.lsp.protocol.Methods.textDocument_documentHighlight, e.buf) then
 			local highlight_group = augroup("lsp-highlight", { clear = false })
 			autocmd({ "CursorHold", "CursorHoldI" }, {
 				buffer = e.buf,
