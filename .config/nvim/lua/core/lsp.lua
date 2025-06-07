@@ -6,6 +6,7 @@ vim.lsp.enable({ "lua_ls" })
 vim.lsp.enable("pyright")
 vim.lsp.enable("rust_analyzer")
 vim.lsp.enable("zls")
+vim.lsp.enable("sprocket")
 -- vim.lsp.enable("tsgo")
 
 vim.diagnostic.config({
