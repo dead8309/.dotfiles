@@ -5,7 +5,11 @@ vim.lsp.set_log_level("debug")
 
 return {
 	cmd = { "sprocket", "analyzer", "--stdio", "-vvvv" },
-	root_markers = { ".git", vim.uv.cwd() },
+	root_markers = {
+		"Cargo.toml",
+		"Sprocket.toml",
+		".git",
+	},
 	filetypes = { "wdl" },
 	capabilities = vim.tbl_deep_extend("force", {}, cmp.default_capabilities(), {
 		fileOperations = {
