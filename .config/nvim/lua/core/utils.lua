@@ -50,7 +50,7 @@ M.lsp_status = function()
 end
 
 M.restart_lsp = function(bufnr)
-	bufnr = bufnr or vim.api.nvim_get_current_buf()
+	bufnr = vim.api.nvim_get_current_buf()
 	local clients
 	if vim.lsp.get_clients then
 		clients = vim.lsp.get_clients({ bufnr = bufnr })
