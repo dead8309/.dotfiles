@@ -1,3 +1,5 @@
+local cmp = require("cmp_nvim_lsp")
+
 return {
 	cmd = { "typescript-language-server", "--stdio" },
 	filetypes = {
