@@ -147,3 +147,22 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # gpg
 export GPG_TTY=$(tty)
+
+
+# OMAKUB
+if command -v mise &> /dev/null; then
+  eval "$(mise activate zsh)"
+fi
+
+if command -v zoxide &> /dev/null; then
+  eval "$(zoxide init zsh)"
+fi
+
+
+export PATH="./bin:$HOME/.local/bin:$HOME/.local/share/omakub/bin:$PATH"
+set +h
+
+export OMAKUB_PATH="/home/$USER/.local/share/omakub"
+
+
+source ~/.local/share/omakub/defaults/bash/functions

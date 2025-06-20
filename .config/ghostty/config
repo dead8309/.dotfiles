@@ -1,2 +1,11 @@
+font-family = "JetBrainsMono Nerd Font Mono"
+font-family-bold =  "JetBrainsMono Nerd Font Mono Bold"
+font-family-italic =  "JetBrainsMono Nerd Font Mono Italic"
+font-family-bold-italic =  "JetBrainsMono Nerd Font Mono Bold Italic"
+
+font-size = 13
+
+theme = tokyonight
 background = #000000
-foreground = #ffffff
+window-decoration = none
+background-opacity = 0.92
