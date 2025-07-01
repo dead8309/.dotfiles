@@ -114,12 +114,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 . "$HOME/.cargo/env"
 
-export PATH="/home/kiit/.detaspace/bin:$PATH"
-
-PROMPT_COMMAND=${PROMPT_COMMAND:+"$PROMPT_COMMAND; "}'printf "\e]9;9;%s\e\\" "$(wslpath -w "$PWD")"'
-
 # pnpm
-export PNPM_HOME="/home/kiit/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -129,8 +125,6 @@ esac
 # Tmux Sessioniser
 bindkey -s ^f "tmux-sessionizer\n"
 
-export PATH="/home/kiit/.local/bin:$PATH"
-
 export PATH="$PATH:/snap/bin"
 
 # Fzf completion
@@ -139,7 +133,7 @@ eval "$(fzf --zsh)"
 source ~/.enviornment-keys
 
 # bun completions
-[ -s "/home/kiit/.bun/_bun" ] && source "/home/kiit/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
@@ -166,3 +160,5 @@ export OMAKUB_PATH="/home/$USER/.local/share/omakub"
 
 
 source ~/.local/share/omakub/defaults/bash/functions
+
+alias bat=batcat
