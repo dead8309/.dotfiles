@@ -66,7 +66,6 @@ return {
 				lua = { "stylua" },
 				go = { "gofumpt", "goimports-reviser", "golines" },
 				bash = { "shfmt" },
-				python = { "black" },
 				rust = { "rustfmt" },
 			},
 			formatters = {

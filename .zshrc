@@ -112,7 +112,6 @@ alias lg=lazygit
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-. "$HOME/.cargo/env"
 
 # pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
@@ -130,8 +129,6 @@ export PATH="$PATH:/snap/bin"
 # Fzf completion
 eval "$(fzf --zsh)"
 
-source ~/.enviornment-keys
-
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
@@ -142,23 +139,21 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # gpg
 export GPG_TTY=$(tty)
 
-
-# OMAKUB
-if command -v mise &> /dev/null; then
-  eval "$(mise activate zsh)"
-fi
-
-if command -v zoxide &> /dev/null; then
-  eval "$(zoxide init zsh)"
-fi
-
-
 export PATH="./bin:$HOME/.local/bin:$HOME/.local/share/omakub/bin:$PATH"
 set +h
 
 export OMAKUB_PATH="/home/$USER/.local/share/omakub"
 
-
-source ~/.local/share/omakub/defaults/bash/functions
-
 alias bat=batcat
+
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+# End Nix
+#
+export JAVA_HOME=/snap/openjdk/current/jdk
+export PATH=$PATH:$JAVA_HOME/bin
+
+
+

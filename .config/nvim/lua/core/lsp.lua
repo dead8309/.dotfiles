@@ -8,7 +8,9 @@ vim.lsp.enable({
 	"rust_analyzer",
 	"sprocket",
 	"zls",
-    "ts_ls"
+    "ts_ls",
+    -- "basedpyright",
+    "ruff",
 })
 -- vim.lsp.enable("tsgo")
 

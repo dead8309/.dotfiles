@@ -25,7 +25,6 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
-. "$HOME/.cargo/env"
 
 # Go
 export PATH=$PATH:/usr/local/go/bin
@@ -33,3 +32,5 @@ export GOPATH=$HOME/.local/share/go
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export XDG_CONFIG_HOME="$HOME/.config"

@@ -38,16 +38,3 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 vim.opt.cursorline = true
-
-vim.g.clipboard = {
-	name = "wl-clipboard",
-	copy = {
-		["+"] = "wl-copy",
-		["*"] = "wl-copy",
-	},
-	paste = {
-		["+"] = "wl-paste",
-		["*"] = "wl-paste",
-	},
-	cache_enabled = 0,
-}
