@@ -2,15 +2,15 @@ vim.lsp.enable({
 	"lua_ls",
 	"bashls",
 	"clangd",
-	"docker_compose_language_service",
+	"docker",
 	"gopls",
-	"pyright",
 	"rust_analyzer",
 	"sprocket",
 	"zls",
     "ts_ls",
-    -- "basedpyright",
     "ruff",
+    "pyright",
+    -- "basedpyright",
 })
 -- vim.lsp.enable("tsgo")
 

@@ -34,3 +34,4 @@ export GOPATH=$HOME/.local/share/go
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export XDG_CONFIG_HOME="$HOME/.config"
+. "$HOME/.cargo/env"
