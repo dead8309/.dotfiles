@@ -27,17 +27,5 @@ return {
 		vim.keymap.set("n", "<M-4>", function()
 			harpoon:list():select(4)
 		end)
-		vim.keymap.set("n", "<leader><M-1>", function()
-			harpoon:list():replace_at(1)
-		end)
-		vim.keymap.set("n", "<leader><M-2>", function()
-			harpoon:list():replace_at(2)
-		end)
-		vim.keymap.set("n", "<leader><M-3>", function()
-			harpoon:list():replace_at(3)
-		end)
-		vim.keymap.set("n", "<leader><M-4>", function()
-			harpoon:list():replace_at(4)
-		end)
 	end,
 }

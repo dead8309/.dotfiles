@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 vim.g.localleader = " "
 
 vim.g.netrw_browse_split = 0
--- vim.g.netrw_banner = 0
+vim.g.netrw_banner = 1
 vim.g.netrw_winsize = 25
 
 vim.opt.clipboard = "unnamed,unnamedplus"
@@ -39,15 +39,15 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 vim.opt.cursorline = true
 
-vim.g.clipboard = {
-	name = "wl-clipboard",
-	copy = {
-		["+"] = "wl-copy",
-		["*"] = "wl-copy",
-	},
-	paste = {
-		["+"] = "wl-paste",
-		["*"] = "wl-paste",
-	},
-	cache_enabled = 0,
-}
+-- vim.g.clipboard = {
+-- 	name = "wl-clipboard",
+-- 	copy = {
+-- 		["+"] = "wl-copy",
+-- 		["*"] = "wl-copy",
+-- 	},
+-- 	paste = {
+-- 		["+"] = "wl-paste",
+-- 		["*"] = "wl-paste",
+-- 	},
+-- 	cache_enabled = 0,
+-- }

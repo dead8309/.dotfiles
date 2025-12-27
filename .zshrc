@@ -110,8 +110,9 @@ alias vi=nvim
 alias lg=lazygit
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 . "$HOME/.cargo/env"
 
 # pnpm
@@ -127,9 +128,6 @@ bindkey -s ^f "tmux-sessionizer\n"
 
 export PATH="$PATH:/snap/bin"
 
-# Fzf completion
-eval "$(fzf --zsh)"
-
 source ~/.enviornment-keys
 
 # bun completions
@@ -142,23 +140,10 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # gpg
 export GPG_TTY=$(tty)
 
-
-# OMAKUB
-if command -v mise &> /dev/null; then
-  eval "$(mise activate zsh)"
-fi
-
-if command -v zoxide &> /dev/null; then
-  eval "$(zoxide init zsh)"
-fi
-
-
-export PATH="./bin:$HOME/.local/bin:$HOME/.local/share/omakub/bin:$PATH"
-set +h
-
-export OMAKUB_PATH="/home/$USER/.local/share/omakub"
-
-
-source ~/.local/share/omakub/defaults/bash/functions
-
 alias bat=batcat
+
+# # Fzf completion
+eval "$(fzf --zsh)"
+# https://github.com/junegunn/fzf/issues/4261#issuecomment-2675202530
+zvm_after_init_commands+=('source <(fzf --zsh)')
+

@@ -1,7 +1,7 @@
 local cmp = require("cmp_nvim_lsp")
 
-vim.lsp.log.set_format_func(vim.inspect)
-vim.lsp.set_log_level("debug")
+-- vim.lsp.log.set_format_func(vim.inspect)
+-- vim.lsp.set_log_level("debug")
 
 --- @type lsp.ClientCapabilities
 local capabilities = {

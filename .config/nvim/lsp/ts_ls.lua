@@ -17,4 +17,7 @@ return {
 			willRename = true,
 		},
 	}),
+	on_attach = function(client, buffer_number)
+		require("twoslash-queries").attach(client, buffer_number)
+	end,
 }
