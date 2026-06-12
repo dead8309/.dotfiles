@@ -52,14 +52,14 @@ return {
 
 		conform.setup({
 			formatters_by_ft = {
-				javascript = { "biome" },
-				typescript = { "biome" },
-				javascriptreact = { "biome" },
-				typescriptreact = { "biome" },
+				javascript = { "oxfmt" },
+				typescript = { "oxfmt" },
+				javascriptreact = { "oxfmt" },
+				typescriptreact = { "oxfmt" },
 				svelte = { "prettier" },
 				css = { "prettier" },
 				html = { "prettier" },
-				json = { "biome" },
+				json = { "prettier" },
 				yaml = { "prettier" },
 				markdown = { "prettier" },
 				graphql = { "prettier" },
@@ -74,6 +74,16 @@ return {
 					command = "rustfmt",
 					args = { "+nightly", "--edition", "2024" },
 					cwd = require("conform.util").root_file({ ".git", "Cargo.toml" }),
+				},
+				oxfmt = {
+					-- 1. Explicitly sets the CLI execution command
+					command = "oxfmt",
+                    -- 2. Tells oxfmt to accept code from standard input (stdin)
+                    args = { "--stdin-filepath", "$FILENAME" },
+					-- 3. Forces evaluation relative to your project's root files
+					cwd = require("conform.util").root_file({ ".oxfmtrc.json", "package.json" }),
+					-- 4. Prevents conform from crashing if oxfmt isn't globally present
+					require_cwd = false,
 				},
 			},
 		})

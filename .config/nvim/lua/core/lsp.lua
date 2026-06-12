@@ -9,6 +9,7 @@ vim.lsp.enable({
 	"sprocket",
 	"zls",
 	"ts_ls",
+    "oxfmt"
 })
 -- vim.lsp.enable("tsgo")
 
