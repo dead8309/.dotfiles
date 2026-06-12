@@ -8,14 +8,14 @@ function FormatBuf()
 	local have_fmt, conform = pcall(require, "conform")
 	if have_fmt then
 		-- get current formatter names
-		local formatters = conform.list_formatters()
+		local formatters, use_lsp = conform.list_formatters_to_run()
 		local fmt_names = {}
 
 		if not vim.tbl_isempty(formatters) then
 			fmt_names = vim.tbl_map(function(f)
 				return f.name
 			end, formatters)
-		elseif conform.will_fallback_lsp(format_args) then
+		elseif use_lsp then
 			fmt_names = { "lsp" }
 		else
 			return
