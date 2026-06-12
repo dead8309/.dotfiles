@@ -18,6 +18,16 @@ autocmd("FileType", {
 	end,
 })
 
+autocmd("FileType", {
+	pattern = "json",
+	callback = function(event)
+		vim.keymap.set("n", "<leader>f", "<cmd>%!jq<CR>", {
+			buffer = event.buf,
+			desc = "Format JSON with jq",
+		})
+	end,
+})
+
 autocmd("LspAttach", {
 	group = dead8309Group,
 	callback = function(e)
