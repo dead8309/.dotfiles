@@ -1,8 +1,4 @@
-.local/bin/ghostty
-.local/bin/bat
-.local/bin/ffmpeg
-.local/bin/ffprobe
-.local/bin/zls
-.local/bin/uv
-.local/bin/uvx
-.local/bin/stripe
+.local/bin/*
+!.local/bin/frg
+!.local/bin/tmux-sessionizer
+!.local/bin/tmux-windowizer
