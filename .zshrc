@@ -147,3 +147,4 @@ eval "$(fzf --zsh)"
 # https://github.com/junegunn/fzf/issues/4261#issuecomment-2675202530
 zvm_after_init_commands+=('source <(fzf --zsh)')
 
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"

@@ -28,8 +28,8 @@ fi
 . "$HOME/.cargo/env"
 
 # Go
-export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/.local/share/go
+export PATH="$PATH:/$GOPATH/bin"
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
