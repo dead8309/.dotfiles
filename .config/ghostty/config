@@ -7,7 +7,9 @@ font-size = 15
 
 theme = tokyonight
 background = #000000
-window-decoration = none
 background-opacity = 0.92
 
 macos-option-as-alt = left
+macos-titlebar-proxy-icon = hidden
+
+title = ghostty
